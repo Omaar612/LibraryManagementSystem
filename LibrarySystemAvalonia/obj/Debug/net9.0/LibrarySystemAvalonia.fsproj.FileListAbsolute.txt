@@ -88,3 +88,4 @@ C:\Users\Omar\LibrarySystem\LibrarySystemAvalonia\obj\Debug\net9.0\LibrarySystem
 C:\Users\Omar\LibrarySystem\LibrarySystemAvalonia\obj\Debug\net9.0\LibraryS.88A7AC32.Up2Date
 C:\Users\Omar\LibrarySystem\LibrarySystemAvalonia\obj\Debug\net9.0\LibrarySystemAvalonia.genruntimeconfig.cache
 C:\Users\Omar\LibrarySystem\LibrarySystemAvalonia\obj\Debug\net9.0\ref\LibrarySystemAvalonia.dll
+C:\Users\Omar\LibrarySystem\LibrarySystemAvalonia\obj\Debug\net9.0\LibrarySystemAvalonia.sourcelink.json

@@ -9,3 +9,4 @@ C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\LibrarySystem.dll
 C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\refint\LibrarySystem.dll
 C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\LibrarySystem.pdb
 C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\ref\LibrarySystem.dll
+C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\LibrarySystem.sourcelink.json
