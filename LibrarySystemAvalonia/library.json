@@ -3,7 +3,7 @@
     "Title": "1984",
     "Author": "George Orwell",
     "Year": 1949,
-    "TotalQuantity": 2,
+    "TotalQuantity": 1,
     "Borrowers": []
   },
   {
@@ -32,7 +32,13 @@
     "Author": "colleen hoover ",
     "Year": 2015,
     "TotalQuantity": 1,
-    "Borrowers": []
+    "Borrowers": [
+      {
+        "Name": "omar",
+        "PhoneNumber": "101",
+        "BorrowedDate": "2025-12-06T23:53:21.1197117+02:00"
+      }
+    ]
   },
   {
     "Title": "normal people",

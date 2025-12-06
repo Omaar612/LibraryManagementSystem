@@ -68,6 +68,23 @@ module LibraryCrud =
                 Ok updated
             | None -> Error (BookNotFound title)
 
+    // 3. Remove Copy (Feature: Delete a copy if available)
+    let removeCopy (title: string) =
+        match library |> List.tryFind (fun b -> equalsIgnoreCase b.Title title) with
+        | Some book ->
+            // Calculate available copies
+            let available = book.TotalQuantity - book.Borrowers.Length
+            
+            // Constraint: Can only remove if we have a physical copy on the shelf
+            if available > 0 then
+                // Logic: Decrease TotalQuantity by exactly 1
+                let updated = { book with TotalQuantity = book.TotalQuantity - 1 }
+                library <- library |> List.map (fun b -> if b.Title = book.Title then updated else b)
+                Ok updated
+            else
+                Error (InvalidInput "Cannot remove copy: All copies are currently borrowed or stock is 0.")
+        | None -> Error (BookNotFound title)
+
     // Prepare data for UI
     let getBooksForGrid () =
         library |> List.map (fun b ->

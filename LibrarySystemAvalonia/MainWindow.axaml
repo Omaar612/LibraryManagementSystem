@@ -14,6 +14,8 @@
             <Button Name="BtnReset" Content="Reset"/>
             <Button Name="BtnBorrow" Content="Borrow Book" Background="LightGreen"/>
             <Button Name="BtnReturn" Content="Return Book" Background="LightSalmon"/>
+            <Button Name="BtnDeleteCopy" Content="Delete Copy" Background="Red" Foreground="White"/>
+
             <Button Name="BtnSave" Content="Save"/>
             <Button Name="BtnLoad" Content="Load"/>
         </StackPanel>
