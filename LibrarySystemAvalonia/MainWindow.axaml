@@ -1,45 +1,45 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
         x:Class="LibrarySystemAvalonia.MainWindow"
-        Title="Library Management System"
-        Width="1000" Height="600">
+        Title="Library System">
 
-    <DockPanel LastChildFill="True">
+    <Grid RowDefinitions="Auto, *, Auto, Auto" Margin="10">
         
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Spacing="10" Margin="10" Background="#f0f0f0">
-            <Button x:Name="BtnSave" Content="Save Data" Background="LightBlue"/>
-            <Button x:Name="BtnLoad" Content="Load Data" Background="LightGreen"/>
-            
-            <TextBlock Text="|" VerticalAlignment="Center" Margin="10,0"/>
-            
-            <TextBox x:Name="TxtSearch" Watermark="Search by Title..." Width="200"/>
-            <Button x:Name="BtnSearch" Content="Search"/>
-            <Button x:Name="BtnReset" Content="Reset/Show All"/>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="10" Margin="0,0,0,10">
+            <TextBox Name="TxtSearch" Watermark="Search Title..." Width="200"/>
+            <Button Name="BtnSearch" Content="Search"/>
+            <Button Name="BtnReset" Content="Reset"/>
+            <Button Name="BtnBorrow" Content="Borrow Book" Background="LightGreen"/>
+            <Button Name="BtnReturn" Content="Return Book" Background="LightSalmon"/>
+            <Button Name="BtnSave" Content="Save"/>
+            <Button Name="BtnLoad" Content="Load"/>
         </StackPanel>
 
-        <StackPanel DockPanel.Dock="Right" Width="250" Spacing="15" Margin="10" Background="#eeeeee">
-            
-            <Border BorderBrush="Gray" BorderThickness="1" Padding="10" CornerRadius="5">
-                <StackPanel Spacing="10">
-                    <TextBlock Text="Selected Book Actions" FontWeight="Bold"/>
-                    <Button x:Name="BtnBorrow" Content="Borrow Selected" HorizontalAlignment="Stretch"/>
-                    <Button x:Name="BtnReturn" Content="Return Selected" HorizontalAlignment="Stretch"/>
-                </StackPanel>
-            </Border>
+        <DataGrid Name="BooksDataGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Author" Binding="{Binding Author}" Width="*"/>
+                <DataGridTextColumn Header="Year" Binding="{Binding Year}"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" FontWeight="Bold"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding StatusDisplay}" Width="200"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
-            <Border BorderBrush="Gray" BorderThickness="1" Padding="10" CornerRadius="5">
-                <StackPanel Spacing="10">
-                    <TextBlock Text="Add New Book" FontWeight="Bold"/>
-                    <TextBox x:Name="InputId" Watermark="ID (e.g., 101)" />
-                    <TextBox x:Name="InputTitle" Watermark="Title" />
-                    <TextBox x:Name="InputAuthor" Watermark="Author" />
-                    <TextBox x:Name="InputYear" Watermark="Year" />
-                    <Button x:Name="BtnAdd" Content="Add Book" HorizontalAlignment="Stretch" Background="Orange"/>
-                </StackPanel>
-            </Border>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="10" Margin="0,5">
+            <TextBlock Text="New Book:" VerticalAlignment="Center" FontWeight="Bold"/>
+            <TextBox Name="InputId" Watermark="ID" Width="50"/>
+            <TextBox Name="InputTitle" Watermark="Title" Width="150"/>
+            <TextBox Name="InputAuthor" Watermark="Author" Width="150"/>
+            <TextBox Name="InputYear" Watermark="Year" Width="60"/>
+            <Button Name="BtnAdd" Content="Add New Book"/>
         </StackPanel>
 
-        <DataGrid x:Name="BooksDataGrid" AutoGenerateColumns="True" IsReadOnly="True" Margin="10"/>
-        
-    </DockPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Spacing="10" Margin="0,5">
+            <Button Name="BtnAddCopies" Content="Add Copies of Existing Book" Background="LightBlue" HorizontalAlignment="Stretch"/>
+        </StackPanel>
+
+    </Grid>
 </Window>

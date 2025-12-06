@@ -112,3 +112,4 @@ C:\Users\Omar\LibrarySystem\LibrarySystemTests\obj\Debug\net10.0\refint\LibraryS
 C:\Users\Omar\LibrarySystem\LibrarySystemTests\obj\Debug\net10.0\LibrarySystemTests.pdb
 C:\Users\Omar\LibrarySystem\LibrarySystemTests\obj\Debug\net10.0\LibrarySystemTests.genruntimeconfig.cache
 C:\Users\Omar\LibrarySystem\LibrarySystemTests\obj\Debug\net10.0\ref\LibrarySystemTests.dll
+C:\Users\Omar\LibrarySystem\LibrarySystemTests\obj\Debug\net10.0\LibrarySystemTests.sourcelink.json

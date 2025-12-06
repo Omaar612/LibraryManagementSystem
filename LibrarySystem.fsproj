@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <OutputType>Library</OutputType>
@@ -11,10 +10,9 @@
     <Compile Include="Services/Search.fs" />
     <Compile Include="Services/BorrowReturn.fs" />
     <Compile Include="Storage/FileStorage.fs" />
-    </ItemGroup>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FSharp.SystemTextJson" Version="1.4.36" />
   </ItemGroup>
-
 </Project>

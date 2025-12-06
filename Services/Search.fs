@@ -5,13 +5,10 @@ open LibrarySystem.Services.LibraryCrud
 
 module Search =
 
-    // Search by ID
-    let searchById id =
-        library |> List.tryFind (fun b -> b.Id = id)
-
-    // Case-insensitive contains helper
+    // Helper for case-insensitive check
     let private containsIgnoreCase (text: string) (query: string) =
-        text.IndexOf(query, System.StringComparison.OrdinalIgnoreCase) >= 0
+        if text = null then false
+        else text.IndexOf(query, System.StringComparison.OrdinalIgnoreCase) >= 0
 
     // Search by title (partial match)
     let searchByTitle query =

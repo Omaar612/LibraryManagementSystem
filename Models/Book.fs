@@ -2,33 +2,40 @@ namespace LibrarySystem.Models
 
 module Book =
 
-    type Status =
-        | Available
-        | Borrowed
+    // --- ERROR TYPES ---
+    type LibraryError =
+        | BookNotFound of string
+        | DuplicateBookId of int
+        | DuplicateBookDetails of string * string
+        | BorrowLimitExceeded of string * int
+        | BookAlreadyBorrowed of string
+        | InvalidInput of string
+
+    module ErrorHelpers =
+        let getMessage error =
+            match error with
+            | BookNotFound t -> $"Book '{t}' was not found."
+            | DuplicateBookId id -> $"Book ID {id} already exists."
+            | DuplicateBookDetails (t, a) -> $"Book '{t}' by {a} already exists."
+            | BorrowLimitExceeded (n, c) -> $"{n} has reached the limit of 2 books (Current: {c})."
+            | BookAlreadyBorrowed n -> $"This book is borrowed by {n}."
+            | InvalidInput msg -> $"Input Error: {msg}"
+
+    // --- DATA TYPES ---
+    type BorrowerInfo = {
+        Name: string
+        PhoneNumber: string
+        BorrowedDate: System.DateTime
+    }
 
     type Book = {
-        Id: int
         Title: string
         Author: string
         Year: int
-        Status: Status
+        TotalQuantity: int
+        Borrowers: BorrowerInfo list
     }
 
-    // Create a new book with default status = Available
-    let createBook id title author year =
-        {
-            Id = id
-            Title = title
-            Author = author
-            Year = year
-            Status = Available
-        }
-
-    // Turn book into user-friendly text
-    let toString (book: Book) =
-        let statusStr =
-            match book.Status with
-            | Available -> "Available"
-            | Borrowed -> "Borrowed"
-
-        $"[{book.Id}] {book.Title} by {book.Author} ({book.Year}) - {statusStr}"
+    // Create a new book
+    let createBook title author year quantity =
+        { Title = title; Author = author; Year = year; TotalQuantity = quantity; Borrowers = [] }

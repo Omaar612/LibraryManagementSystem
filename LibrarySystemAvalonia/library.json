@@ -1,44 +1,44 @@
 [
   {
-    "Id": 1,
     "Title": "1984",
     "Author": "George Orwell",
     "Year": 1949,
-    "Status": "Available"
+    "TotalQuantity": 2,
+    "Borrowers": []
   },
   {
-    "Id": 2,
     "Title": "Brave New World",
     "Author": "Aldous Huxley",
     "Year": 1932,
-    "Status": "Available"
+    "TotalQuantity": 1,
+    "Borrowers": []
   },
   {
-    "Id": 3,
     "Title": "Animal Farm",
     "Author": "George Orwell",
     "Year": 1945,
-    "Status": "Available"
+    "TotalQuantity": 1,
+    "Borrowers": []
   },
   {
-    "Id": 4,
     "Title": "The Great Gatsby",
     "Author": "F. Scott Fitzgerald",
     "Year": 1925,
-    "Status": "Borrowed"
+    "TotalQuantity": 1,
+    "Borrowers": []
   },
   {
-    "Id": 5,
     "Title": "November 9",
     "Author": "colleen hoover ",
     "Year": 2015,
-    "Status": "Borrowed"
+    "TotalQuantity": 1,
+    "Borrowers": []
   },
   {
-    "Id": 6,
     "Title": "normal people",
     "Author": "sally rooney",
     "Year": 2018,
-    "Status": "Borrowed"
+    "TotalQuantity": 1,
+    "Borrowers": []
   }
 ]
