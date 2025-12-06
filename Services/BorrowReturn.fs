@@ -2,6 +2,7 @@ namespace LibrarySystem.Services
 
 open LibrarySystem.Models.Book
 open LibrarySystem.Services.LibraryCrud
+open System.Text.RegularExpressions // Required for Regex
 
 module BorrowReturn =
 
@@ -10,8 +11,19 @@ module BorrowReturn =
         System.String.Equals(a, b, System.StringComparison.OrdinalIgnoreCase)
 
     let borrowBook title name phone =
-        if System.String.IsNullOrWhiteSpace(name) then Error (InvalidInput "Name required")
-        else if System.String.IsNullOrWhiteSpace(phone) then Error (InvalidInput "Phone required")
+        // 1. Validate Name
+        if System.String.IsNullOrWhiteSpace(name) then 
+            Error (InvalidInput "Name required")
+        else if not (Regex.IsMatch(name, @"^[\p{L}\s]+$")) then
+            Error (InvalidInput "Borrower name cannot contain digits or symbols.")
+
+        // 2. Validate Phone
+        else if System.String.IsNullOrWhiteSpace(phone) then 
+            Error (InvalidInput "Phone required")
+        // Check: Starts with 01, exactly 11 digits total (01 + 9 digits)
+        else if not (Regex.IsMatch(phone, @"^01\d{9}$")) then
+            Error (InvalidInput "Phone must be 11 digits, start with '01', and contain only numbers.")
+
         else
             // Check Identity
             let isPhoneUsedByOther = 

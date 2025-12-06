@@ -23,7 +23,7 @@ module LibraryCrud =
 
     // 1. Add New Book (Now Sanitizes Input Automatically)
     let addBook (rawTitle: string) (rawAuthor: string) (year: int) (quantity: int) =
-        
+    
         // A. CLEAN THE INPUTS AUTOMATICALLY
         let title = sanitize rawTitle
         let author = sanitize rawAuthor
@@ -33,6 +33,10 @@ module LibraryCrud =
         // 1. Check if Author is empty (after cleaning)
         if System.String.IsNullOrWhiteSpace(author) then
             Error (InvalidInput "Author cannot be empty.")
+            
+        // NEW: Check if Author contains only letters and spaces (No digits or symbols)
+        else if not (Regex.IsMatch(author, @"^[\p{L}\s]+$")) then
+             Error (InvalidInput "Author name cannot contain digits or symbols.")
         
         // 2. Check Year
         else if year > System.DateTime.Now.Year then
@@ -82,7 +86,7 @@ module LibraryCrud =
                 library <- library |> List.map (fun b -> if b.Title = book.Title then updated else b)
                 Ok updated
             else
-                Error (InvalidInput "Cannot remove copy: All copies are currently borrowed or stock is 0.")
+                 Error (InvalidInput "Cannot remove copy: All copies are currently borrowed or stock is 0.")
         | None -> Error (BookNotFound title)
 
     // Prepare data for UI
