@@ -1,0 +1,11 @@
+C:\Users\Omar\LibrarySystem\bin\Debug\net9.0\LibrarySystem.deps.json
+C:\Users\Omar\LibrarySystem\bin\Debug\net9.0\LibrarySystem.dll
+C:\Users\Omar\LibrarySystem\bin\Debug\net9.0\LibrarySystem.pdb
+C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\LibrarySystem.fsproj.AssemblyReference.cache
+C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\LibrarySystem.AssemblyInfoInputs.cache
+C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\LibrarySystem.AssemblyInfo.fs
+C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\LibrarySystem.fsproj.CoreCompileInputs.cache
+C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\LibrarySystem.dll
+C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\refint\LibrarySystem.dll
+C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\LibrarySystem.pdb
+C:\Users\Omar\LibrarySystem\obj\Debug\net9.0\ref\LibrarySystem.dll

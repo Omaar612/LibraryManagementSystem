@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "Title": "1984",
+    "Author": "George Orwell",
+    "Year": 1949,
+    "Status": "Available"
+  },
+  {
+    "Id": 2,
+    "Title": "Brave New World",
+    "Author": "Aldous Huxley",
+    "Year": 1932,
+    "Status": "Available"
+  },
+  {
+    "Id": 3,
+    "Title": "Animal Farm",
+    "Author": "George Orwell",
+    "Year": 1945,
+    "Status": "Available"
+  }
+]

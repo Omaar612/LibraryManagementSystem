@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="LibrarySystemAvalonia">
+    <resource name="FSharpSignatureData.LibrarySystemAvalonia" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.LibrarySystemAvalonia" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.LibrarySystemAvalonia" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.LibrarySystemAvalonia" action="remove"></resource>
+    <resource name="FSharpOptimizationData.LibrarySystemAvalonia" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.LibrarySystemAvalonia" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.LibrarySystemAvalonia" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.LibrarySystemAvalonia" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.LibrarySystemAvalonia" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.LibrarySystemAvalonia" action="remove"></resource>
+  </assembly>
+</linker>

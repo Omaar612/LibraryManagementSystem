@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="LibrarySystemTests">
+    <resource name="FSharpSignatureData.LibrarySystemTests" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.LibrarySystemTests" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.LibrarySystemTests" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.LibrarySystemTests" action="remove"></resource>
+    <resource name="FSharpOptimizationData.LibrarySystemTests" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.LibrarySystemTests" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.LibrarySystemTests" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.LibrarySystemTests" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.LibrarySystemTests" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.LibrarySystemTests" action="remove"></resource>
+  </assembly>
+</linker>
