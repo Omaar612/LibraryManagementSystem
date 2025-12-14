@@ -6,7 +6,7 @@ open System.Text.RegularExpressions // Required for Regex
 
 module BorrowReturn =
 
-    // Helper
+    // Helper.
     let private equalsIgnoreCase (a: string) (b: string) =
         System.String.Equals(a, b, System.StringComparison.OrdinalIgnoreCase)
 
