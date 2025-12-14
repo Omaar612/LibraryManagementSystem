@@ -1,6 +1,6 @@
 # 📚 Library Management System
 
-A robust, functional Library Management System built with **F\#** and **Avalonia UI**. This application allows librarians to manage book inventory, track borrowed items, and handle user returns with strict validation rules and persistent data storage.
+A robust, functional Library Management System built with **F\#** and **Avalonia UI**. This application allows librarians to manage book inventory, track borrowed items, and handle user returns with strict validation rules and persistent data storage
 
 -----
 
