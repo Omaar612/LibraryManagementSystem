@@ -217,7 +217,7 @@ type LibraryTests() =
     [<Fact>]
     member this.``Scenario: Stock runs out and becomes available again`` () =
         setup()
-        // 1. Librarian adds a book with only 1 copy
+        // 1. Librarrian adds a book with only 1 copy
         LibraryCrud.addBook "Rare Book" "Author" 2020 1 |> ignore
         
         // 2. User A borrows it (Success)
