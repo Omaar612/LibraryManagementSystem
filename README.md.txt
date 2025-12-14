@@ -13,7 +13,7 @@ A robust, functional Library Management System built with **F\#** and **Avalonia
 5.  [Project Architecture](https://www.google.com/search?q=%23-project-architecture)
 6.  [Features](https://www.google.com/search?q=%23-features)
 
------
+------
 
 ## 🛠 Prerequisites
 
