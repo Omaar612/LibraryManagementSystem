@@ -42,7 +42,7 @@ type LibraryTests() =
     [<Fact>]
     member this.``Add Book - Fails for Future Year`` () =
         setup()
-        let futureYear = DateTime.Now.Year + 1
+        let futureYear = DateTime.Now.Year 
         let result = LibraryCrud.addBook "Future Book" "Author" futureYear 5
         
         match result with
