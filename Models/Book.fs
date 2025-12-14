@@ -5,7 +5,6 @@ module Book =
     // --- ERROR TYPES ---
     type LibraryError =
         | BookNotFound of string
-        | DuplicateBookId of int
         | DuplicateBookDetails of string * string
         | BorrowLimitExceeded of string * int
         | BookAlreadyBorrowed of string
@@ -15,7 +14,6 @@ module Book =
         let getMessage error =
             match error with
             | BookNotFound t -> $"Book '{t}' was not found."
-            | DuplicateBookId id -> $"Book ID {id} already exists."
             | DuplicateBookDetails (t, a) -> $"Book '{t}' by {a} already exists."
             | BorrowLimitExceeded (n, c) -> $"{n} has reached the limit of 2 books (Current: {c})."
             | BookAlreadyBorrowed n -> $"This book is borrowed by {n}."
